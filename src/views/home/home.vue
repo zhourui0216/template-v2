@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import request from "@/api/home.js"
 export default {
     data() {
         return {
@@ -13,14 +12,11 @@ export default {
         }
     },
     mounted() {
-        request.getData({
-            page: 2
-        }).then(res => {
-            console.log(res);
-        })
+
     }
 }
 </script>
 
 <style scoped lang="scss">
+
 </style>

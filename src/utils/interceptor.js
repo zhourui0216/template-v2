@@ -2,7 +2,7 @@ import axios from "axios";
 
 // 创建实例
 let example = axios.create({
-    baseURL: "http://106.14.67.41:32123",
+    baseURL: "url",
     timeout: 10000
 });
 
@@ -13,7 +13,6 @@ example.interceptors.request.use(function (config) {
     return config;
 }, function (error) {
     // 处理请求错误
-    console.log("请求错误")
     return Promise.reject(error);
 });
 
@@ -23,7 +22,6 @@ example.interceptors.response.use(function (response) {
     return response.data;
 }, function (error) {
     // 处理响应错误
-    console.log("响应错误")
     return Promise.reject(error);
 });
 
