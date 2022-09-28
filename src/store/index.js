@@ -9,7 +9,7 @@ export default new Vuex.Store({
   getters: {
   },
   mutations: {
-    setDate(state, object) {
+    setData(state, object) {
       for (let i in object) {
         state[i] = object[i];
       }
