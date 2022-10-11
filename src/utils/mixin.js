@@ -7,16 +7,16 @@ export default {
     methods: {
         /**
          * 深拷贝
-         * @param {Object} object 复制的对象
-         * @returns 复制后的对象
+         * @param {object} object 复制的对象
+         * @returns {object} 复制后的对象
          */
         deepCopy(object) {
             return JSON.parse(JSON.stringify(object));
         },
         /**
          * 过滤对象空值
-         * @param {Object} object 处理的对象
-         * @returns 处理后的对象
+         * @param {object} object 处理的对象
+         * @returns {object} 处理后的对象
          */
         filterObjectNull(object) {
             let data = {};
