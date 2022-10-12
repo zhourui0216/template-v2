@@ -1,4 +1,4 @@
-# 项目模板-vue2
+# vue2-项目模板
 
 ## 项目介绍
 模板
@@ -7,10 +7,10 @@
 - 如需要移动端布局，项目文件夹下postcss.config.js解开配置，并安装依赖
 
 ### 环境依赖
+- git
 - nodejs
 
 ### 项目运行
-- 安装nodejs
 - 命令行：npm install
 - 命令行：npm run serve
 - 打包：npm run build
@@ -34,7 +34,7 @@
 
     ├── router -- 路由
 
-    ├── store -- vuex状态管理
+    ├── store -- 状态管理
 
     ├── utils -- 方法类
 

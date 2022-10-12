@@ -7,42 +7,42 @@ export default {
     methods: {
         /**
          * 深拷贝
-         * @param {object} object 复制的对象
+         * @param {object} obj 复制的对象
          * @returns {object} 复制后的对象
          */
-        deepCopy(object) {
-            return JSON.parse(JSON.stringify(object));
+        deepCopy(obj) {
+            return JSON.parse(JSON.stringify(obj));
         },
         /**
          * 过滤对象空值
-         * @param {object} object 处理的对象
+         * @param {object} obj 处理的对象
          * @returns {object} 处理后的对象
          */
-        filterObjectNull(object) {
+        filterObjectNull(obj) {
             let data = {};
-            for (let i in object) {
-                if (object[i] !== null && object[i] !== "") {
-                    object[i] = object[i];
+            for (let i in obj) {
+                if (obj[i] !== null && obj[i] !== "") {
+                    obj[i] = obj[i];
                 }
             }
             return data;
         },
         /**
          * 比较对象修改的值
-         * @param {*} newObject 新的对象
-         * @param {*} oldObject 旧的对象
-         * @returns 修改的值
+         * @param {object} newObj 新的对象
+         * @param {object} oldObj 旧的对象
+         * @returns {object} 修改的值
          */
-        compareDifferent(newObject, oldObject) {
+        compareDifferent(newObj, oldObj) {
             let data = {};
-            for (let key in newObject) {
-                if (typeof newObject[key] == "object") {
-                    if (JSON.stringify(newObject[key]) != JSON.stringify(oldObject[key])) {
-                        data[key] = newObject[key];
+            for (let key in newObj) {
+                if (typeof newObj[key] == "object") {
+                    if (JSON.stringify(newObj[key]) != JSON.stringify(oldObj[key])) {
+                        data[key] = newObj[key];
                     }
                 } else {
-                    if (newObject[key] != oldObject[key]) {
-                        data[key] = newObject[key];
+                    if (newObj[key] != oldObj[key]) {
+                        data[key] = newObj[key];
                     }
                 }
             }
@@ -52,10 +52,10 @@ export default {
     filters: {
         /**
          * 根据id从数组中筛选并返回另一个属性
-         * @param {*} id 数据唯一标识
-         * @param {*} list 数据列表
-         * @param {*} key 其他属性
-         * @returns 筛选对象的其他属性
+         * @param {number} id 数据唯一标识
+         * @param {array} list 数据列表
+         * @param {string} key 其他属性
+         * @returns {string|number} 筛选对象的其他属性值
          */
         findKey(id, list, key) {
             if (!id || !list.length) return "暂无";
