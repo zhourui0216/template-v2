@@ -11,9 +11,9 @@
 - nodejs
 
 ### 项目运行
-- 命令行：npm install
-- 命令行：npm run serve
-- 打包：npm run build
+- 下载依赖: npm install
+- 运行: npm run serve
+- 打包: npm run build
 
 ### 技术选型
  技术 | 说明
