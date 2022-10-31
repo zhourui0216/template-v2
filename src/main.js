@@ -6,7 +6,7 @@ import store from './store'
 import mixin from "./utils/mixin.js"
 Vue.mixin(mixin)
 
-Vue.prototype.$EventBus = new Vue()
+Vue.prototype.$eventBus = new Vue()
 
 Vue.config.productionTip = false
 
